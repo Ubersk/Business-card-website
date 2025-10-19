@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт-визитка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Фон с анимированными фигурами -->
+    <div class="background-animation">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+        <div class="shape shape-6"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Профессионал</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Главная</a></li>
+                <li><a href="#about" class="nav-link">Обо мне</a></li>
+                <li><a href="#skills" class="nav-link">Навыки</a></li>
+                <li><a href="#contact" class="nav-link">Контакты</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Привет, я <span class="highlight">Кручинин Святослав</span></h1>
+            <p>Веб-разработчик и дизайнер</p>
+            <button class="cta-button">Связаться со мной</button>
+        </div>
+        <div class="hero-image">
+            <div class="image-placeholder">    
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>Обо мне</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Я профессиональный веб-разработчик с 5-летним опытом создания современных и отзывчивых веб-приложений.</p>
+                <p>Специализируюсь на фронтенд разработке и UI/UX дизайне.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Мои навыки</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Frontend</h3>
+                <p>HTML, CSS, JavaScript, React</p>
+            </div>
+            <div class="skill-card">
+                <h3>Backend</h3>
+                <p>Node.js, Express, MongoDB</p>
+            </div>
+            <div class="skill-card">
+                <h3>Дизайн</h3>
+                <p>Figma, Adobe XD, Photoshop</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Контакты</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <p>📧 example@email.com</p>
+                <p>📱 +7 (999) 999-99-99</p>
+                <p>📍 Москва, Россия</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Все права защищены</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
