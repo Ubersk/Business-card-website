@@ -151,6 +151,97 @@ section {
     backdrop-filter: blur(5px);
 }
 
+/* Стили для изображения профиля */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    border: 4px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: all 0.5s ease;
+    animation: imageFloat 6s ease-in-out infinite;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(52, 152, 219, 0.4);
+}
+
+.image-glow {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #3498db, #9b59b6, #2ecc71);
+    filter: blur(20px);
+    opacity: 0.3;
+    z-index: 1;
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+.image-border {
+    position: absolute;
+    width: 108%;
+    height: 108%;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    background: linear-gradient(45deg, #3498db, #9b59b6, #2ecc71, #e74c3c) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 1;
+    animation: rotateBorder 8s linear infinite;
+}
+
+@keyframes imageFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes rotateBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* Остальные стили из предыдущей версии остаются без изменений */
 .nav-container {
     max-width: 1200px;
@@ -237,24 +328,6 @@ section {
     background: #2980b9;
 }
 
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.image-placeholder {
-    width: 300px;
-    height: 300px;
-    background: #ecf0f1;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    color: #7f8c8d;
-}
-
 h2 {
     text-align: center;
     font-size: 2.5rem;
@@ -336,10 +409,15 @@ h2 {
         font-size: 2rem;
     }
 
-    .image-placeholder {
-        width: 200px;
-        height: 200px;
+    .image-container {
+        width: 250px;
+        height: 250px;
         margin-top: 2rem;
+    }
+
+    .profile-image {
+        width: 100%;
+        height: 100%;
     }
 
     .shape {
