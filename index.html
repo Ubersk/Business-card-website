@@ -3,94 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business-card website</title>
+    <title>ubersk | Веб-разработчик</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
 </head>
 <body>
-    <!-- Фон с анимированными фигурами -->
-    <div class="background-animation">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-        <div class="shape shape-4"></div>
-        <div class="shape shape-5"></div>
-        <div class="shape shape-6"></div>
-    </div>
-
+    <!-- Навигация -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Business-card website</div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Главная</a></li>
+            <div class="logo">
+                <span class="logo-icon">👨‍💻</span>
+                <span class="logo-text">ubersk</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Главная</a></li>
                 <li><a href="#about" class="nav-link">Обо мне</a></li>
                 <li><a href="#skills" class="nav-link">Навыки</a></li>
+                <li><a href="#projects" class="nav-link">Проекты</a></li>
                 <li><a href="#contact" class="nav-link">Контакты</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
-    <section id="home" class="hero">
+    <!-- Герой-секция -->
+    <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Привет, я <span class="highlight">ubersk</span></h1>
-            <p>Веб-разработчик и дизайнер</p>
-            <button class="cta-button">Связаться со мной</button>
+            <div class="hero-text">
+                <h1 class="hero-title">Привет, я <span class="highlight">Святослав Кручинин</span></h1>
+                <h2 class="hero-subtitle">Fullstack веб-разработчик & UI/UX дизайнер</h2>
+                <p class="hero-description">Создаю современные, быстрые и адаптивные веб-приложения с фокусом на пользовательский опыт и чистый код.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Связаться со мной</a>
+                    <a href="#projects" class="btn btn-secondary">Мои работы</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="floating-element html"><i class="fab fa-html5"></i></div>
+                        <div class="floating-element css"><i class="fab fa-css3-alt"></i></div>
+                        <div class="floating-element js"><i class="fab fa-js"></i></div>
+                        <div class="floating-element react"><i class="fab fa-react"></i></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="hero-image">
-            <div class="image-container">
-                <img src="example.jpg" alt="Кручинин Святослав" class="profile-image">
-                <div class="image-glow"></div>
-                <div class="image-border"></div>
+        <div class="scroll-indicator">
+            <span>Листай вниз</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section class="section about" id="about">
+        <div class="section-container">
+            <h2 class="section-title">Обо <span class="highlight">мне</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Я веб-разработчик с более чем 5-летним опытом создания современных веб-приложений. Специализируюсь на frontend и backend разработке, уделяя особое внимание производительности и удобству использования.</p>
+                    <p>Мой подход к разработке включает в себя тщательное планирование, чистую архитектуру кода и постоянное обучение новым технологиям. Я верю, что лучшие цифровые продукты рождаются на стыке технологий и дизайна.</p>
+                    <div class="facts">
+                        <div class="fact">
+                            <span class="fact-number">50+</span>
+                            <span class="fact-text">Завершенных проектов</span>
+                        </div>
+                        <div class="fact">
+                            <span class="fact-number">5+</span>
+                            <span class="fact-text">Лет опыта</span>
+                        </div>
+                        <div class="fact">
+                            <span class="fact-number">100%</span>
+                            <span class="fact-text">Довольных клиентов</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-card">
+                        <h3>Мои интересы</h3>
+                        <ul class="interests">
+                            <li><i class="fas fa-code"></i> Веб-разработка</li>
+                            <li><i class="fas fa-paint-brush"></i> UI/UX дизайн</li>
+                            <li><i class="fas fa-mobile-alt"></i> Мобильные приложения</li>
+                            <li><i class="fas fa-chart-line"></i> Оптимизация производительности</li>
+                            <li><i class="fas fa-robot"></i> Искусственный интеллект</li>
+                            <li><i class="fas fa-gamepad"></i> Геймдев</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <h2>Обо мне</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Я профессиональный веб-разработчик с 5-летним опытом создания современных и отзывчивых веб-приложений.</p>
-                <p>Специализируюсь на фронтенд разработке и UI/UX дизайне.</p>
+    <!-- Навыки -->
+    <section class="section skills" id="skills">
+        <div class="section-container">
+            <h2 class="section-title">Мои <span class="highlight">навыки</span></h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                    <div class="skill">
+                        <span class="skill-name">HTML/CSS</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-level="95"></div>
+                        </div>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-level="90"></div>
+                        </div>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">React</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill">
+                        <span class="skill-name">Node.js</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">PHP</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-level="75"></div>
+                        </div>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">Базы данных</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Инструменты</h3>
+                    <div class="skill">
+                        <span class="skill-name">Git</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-level="90"></div>
+                        </div>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">Figma</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">Webpack</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" data-level="75"></div>
+                        </div>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="skills">
-        <h2>Мои навыки</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Frontend</h3>
-                <p>HTML, CSS, JavaScript, React</p>
-            </div>
-            <div class="skill-card">
-                <h3>Backend</h3>
-                <p>Node.js, Express, MongoDB</p>
-            </div>
-            <div class="skill-card">
-                <h3>Дизайн</h3>
-                <p>Figma, Adobe XD, Photoshop</p>
+    <!-- Проекты -->
+    <section class="section projects" id="projects">
+        <div class="section-container">
+            <h2 class="section-title">Мои <span class="highlight">проекты</span></h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image" style="background-color: #4a6fa5;">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Интернет-магазин</h3>
+                        <p>Полнофункциональный интернет-магазин с корзиной, платежной системой и админ-панелью.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image" style="background-color: #6d5ac9;">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Manager</h3>
+                        <p>Приложение для управления задачами с возможностью совместной работы и уведомлениями.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">PWA</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image" style="background-color: #2a9d8f;">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Аналитическая панель</h3>
+                        <p>Дашборд для визуализации данных с графиками, фильтрами и экспортом отчетов.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">D3.js</span>
+                            <span class="tag">Express</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2>Контакты</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <p>📧 example@email.com</p>
-                <p>📱 +7 (999) 999-99-99</p>
-                <p>📍 Москва, Россия</p>
+    <!-- Контакты -->
+    <section class="section contact" id="contact">
+        <div class="section-container">
+            <h2 class="section-title">Свяжитесь <span class="highlight">со мной</span></h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Давайте создадим что-то вместе!</h3>
+                    <p>Готов к новым вызовам и интересным проектам. Свяжитесь со мной любым удобным способом.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>kruchinin.s.s@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Телефон</h4>
+                                <p>+7 (999) 692-78-52</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Локация</h4>
+                                <p>Волгодонск, Россия</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-codepen"></i></a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Ваш email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Ваше сообщение" id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                </form>
             </div>
         </div>
     </section>
 
+    <!-- Футер -->
     <footer class="footer">
-        <p>&copy; 2025 Все права защищены</p>
+        <div class="footer-container">
+            <div class="logo">
+                <span class="logo-icon">👨‍💻</span>
+                <span class="logo-text">ubersk</span>
+            </div>
+            <p class="footer-text">Создаю цифровые продукты с 2020 года</p>
+            <p class="copyright">© 2025 ubersk. Все права защищены.</p>
+        </div>
     </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
